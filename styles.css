@@ -1,0 +1,46 @@
+.container {
+	display: grid;
+	/* sets the colums to have set widths on the sides and the middle one fills whatever
+	space is left*/
+	/*grid-template-columns: 100px auto 100px;  three columns */
+	/*grid-template-rows: 50px 50px;  two rows */
+	/*grid-gap: 3px; puts space between the div elements */
+
+
+	/*  fraction unit allows the columns and rows to be more responsive*/
+	grid-template-columns: 1fr 2fr 1fr; /* this splits the grid into 4 equal
+								pieces and they each grow and shrink at the same rate*/
+    grid-template-rows: 50px 50px;
+
+    /*another way to make it easier to define the columns/rows: */
+    /*grid-template: repeat(2,50px) / repeat(3, 1fr); rows first, columns second*/
+}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+
+html, body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+
+.container > div:nth-child(1n) {
+  background-color: #96ceb4;	
+}
+
+.container > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+  background-color: #ff6f69;
+}
+
+.container > div:nth-child(4n) {
+  background-color: #ffcc5c;
+}
