@@ -2,7 +2,8 @@
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr); /*allows the columns to fill the amount of space needed for the contents*/
-    grid-template-rows: 40px 200px 40px;
+    grid-template-rows: 100px 400px 100px;
+
 }
 
 .header { /*sets the header to span from the first column line to the third column line
