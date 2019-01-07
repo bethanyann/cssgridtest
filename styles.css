@@ -1,32 +1,27 @@
 .container {
-	display: grid;
-	/* sets the colums to have set widths on the sides and the middle one fills whatever
-	space is left*/
-	/*grid-template-columns: 100px auto 100px;  three columns */
-	/*grid-template-rows: 50px 50px;  two rows */
-	/*grid-gap: 3px; puts space between the div elements */
-
-
-	/*  fraction unit allows the columns and rows to be more responsive*/
-	grid-template-columns: 1fr 2fr 1fr; /* this splits the grid into 4 equal
-								pieces and they each grow and shrink at the same rate*/
-    grid-template-rows: 50px 50px;
-
-    /*another way to make it easier to define the columns/rows: */
-    /*grid-template: repeat(2,50px) / repeat(3, 1fr); rows first, columns second*/
+    display: grid;
+    grid-gap: 5px;
+    /* the min-max declaration makes sure that the columns always fit
+    the full width of the main container and the columns stay at the min of 100px, */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+    grid-auto-rows: 100px;
 }
 
 .container > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    color: #ffeead;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
 }
 
 html, body {
+  box-sizing: border-box;
   background-color: #ffeead;
-  margin: 10px;
+  height: 100%;
+  padding: 10px;
+  margin: 0px;
 }
 
 .container > div:nth-child(1n) {
