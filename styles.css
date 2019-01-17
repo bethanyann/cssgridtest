@@ -17,7 +17,7 @@
 
 .container {
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
     grid-auto-rows: 125px; /* implicitly creating the rows */
     grid-auto-flow: dense; /* dense packing algorithm attempts to fill holes in the grid with small items  - source order independence */
